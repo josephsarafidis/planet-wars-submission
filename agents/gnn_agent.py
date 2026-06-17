@@ -12,6 +12,7 @@ import torch
 import torch.nn as nn
 import importlib
 from pathlib import Path
+import traceback
 
 
 N_PLANETS = 30
@@ -96,10 +97,10 @@ class EventDrivenAllPlanetsGNNAgent(PlanetWarsPlayer):
                     
             print(f"Loaded Advanced GNN Model successfully from {model_path}")
             self.agent_type = f"RL_Gen25F_{self.model_name}" 
-        except Exception as e:
-            print(f"Warning: Could not load model from {model_path}. Error: {e}")
-            self.model = None
-            self.agent_type = "Failed to load"
+
+        except Exception:
+            traceback.print_exc()
+            raise
 
         self.max_planets = max_planets
         self.features_per_node = 23 
