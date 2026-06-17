@@ -11,6 +11,8 @@ from gymnasium import spaces  # <--- ΑΥΤΟ ΕΛΕΙΠΕ
 import torch
 import torch.nn as nn
 import importlib
+from pathlib import Path
+
 
 N_PLANETS = 30
 
@@ -86,8 +88,11 @@ class EventDrivenAllPlanetsGNNAgent(PlanetWarsPlayer):
         try:
             print("Loading model...")
 
+
+            BASE_DIR = Path(__file__).resolve().parent.parent
+            MODEL_PATH = BASE_DIR / "models" / "selfplay_champion.zip"
             
-            self.model = manual_load_model(model_path)
+            self.model = manual_load_model(str(MODEL_PATH))
                     
             print(f"Loaded Advanced GNN Model successfully from {model_path}")
             self.agent_type = f"RL_Gen25F_{self.model_name}" 
