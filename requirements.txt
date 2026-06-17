@@ -1,29 +1,10 @@
-# --- PyTorch CPU Override (CRITICAL for small Docker image) ---
 --extra-index-url https://download.pytorch.org/whl/cpu
 
-# --- Machine Learning & Math ---
-torch
-stable-baselines3
-sb3-contrib
-numpy
-gymnasium
+torch==2.3.1
+stable-baselines3==2.3.2
+sb3-contrib==2.3.0
+gymnasium==0.29.1
+numpy==1.26.4
 
-# --- Web Server & Data Validation ---
-websockets
-pydantic
-
-
-annotated-types
-cloudpickle
-Farama-Notifications
-filelock
-fsspec
-Jinja2
-MarkupSafe
-mpmath
-networkx
-pydantic_core
-sympy
-typing-inspection
-typing_extensions
-
+websockets==12.0
+pydantic==2.7.4
