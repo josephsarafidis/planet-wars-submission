@@ -1,0 +1,13 @@
+# --- PyTorch CPU Override (CRITICAL for small Docker image) ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# --- Machine Learning & Math ---
+torch
+stable-baselines3
+sb3-contrib
+numpy
+gymnasium
+
+# --- Web Server & Data Validation ---
+websockets
+pydantic
