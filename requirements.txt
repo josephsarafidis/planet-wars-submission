@@ -11,3 +11,19 @@ gymnasium
 # --- Web Server & Data Validation ---
 websockets
 pydantic
+
+
+annotated-types
+cloudpickle
+Farama-Notifications
+filelock
+fsspec
+Jinja2
+MarkupSafe
+mpmath
+networkx
+pydantic_core
+sympy
+typing-inspection
+typing_extensions
+
